@@ -1,0 +1,41 @@
+{
+  "name": "eyeglass-dev-testutils",
+  "version": "0.0.0",
+  "description": "Testing Utilities. For Eyeglass.",
+  "license": "Apache License 2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eoneill/eyeglass-dev-testutils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eoneill/eyeglass-dev-testutils/issues"
+  },
+  "homepage": "https://github.com/eoneill/eyeglass-dev-testutils",
+  "author": {
+    "name": "Eugene ONeill",
+    "email": "",
+    "url": "https://github.com/eoneill"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/gulp test"
+  },
+  "dependencies": {
+    "chalk": "^1.1.0",
+    "diff": "^1.4.0",
+    "eyeglass": "*",
+    "glob": "^5.0.13",
+    "gulp": "^3.9.0",
+    "node-sass": "*"
+  },
+  "devDependencies": {
+    "eyeglass-dev-eslint": "1.0.1",
+    "gulp-bump": "^0.3.1",
+    "gulp-eslint": "0.15.0",
+    "gulp-git": "^1.2.4",
+    "gulp-mocha": "^2.1.2",
+    "gulp-prompt": "^0.1.2",
+    "gulp-tag-version": "^1.2.1",
+    "mocha": "^2.2.5",
+    "should": ">= 7.0.1"
+  }
+}
