@@ -5,12 +5,12 @@
   "license": "Apache License 2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/eoneill/eyeglass-dev-testutils.git"
+    "url": "https://github.com/sass-eyeglass/eyeglass-dev-testutils.git"
   },
   "bugs": {
-    "url": "https://github.com/eoneill/eyeglass-dev-testutils/issues"
+    "url": "https://github.com/sass-eyeglass/eyeglass-dev-testutils/issues"
   },
-  "homepage": "https://github.com/eoneill/eyeglass-dev-testutils",
+  "homepage": "https://github.com/sass-eyeglass/eyeglass-dev-testutils",
   "author": {
     "name": "Eugene ONeill",
     "email": "",
