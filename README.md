@@ -1,5 +1,9 @@
 # eyeglass-dev-testutils
 
+[![Build Status](https://travis-ci.org/sass-eyeglass/eyeglass-dev-testutils.svg)](https://travis-ci.org/sass-eyeglass/eyeglass-dev-testutils)
+[![Version](https://img.shields.io/npm/v/eyeglass-dev-testutils.svg)](https://www.npmjs.com/package/eyeglass-dev-testutils)
+[![License](https://img.shields.io/npm/l/eyeglass-dev-testutils.svg)](./LICENSE)
+
 A suite of utilities for writing tests in eyeglass modules.
 
 ## Installation
