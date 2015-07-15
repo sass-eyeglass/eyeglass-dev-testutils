@@ -54,7 +54,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 
 [travis-ci]: https://travis-ci.org/sass-eyeglass/eyeglass-dev-testutils
-[travis-ci-badge]: https://img.shields.io/travis/sass-eyeglass/eyeglass-dev-testutils?style=flat-square
+[travis-ci-badge]: https://img.shields.io/travis/sass-eyeglass/eyeglass-dev-testutils.svg?style=flat-square
 [npm-version]: https://www.npmjs.com/package/eyeglass-dev-testutils
 [npm-version-badge]: https://img.shields.io/npm/v/eyeglass-dev-testutils.svg?style=flat-square
 [license]: ./LICENSE
