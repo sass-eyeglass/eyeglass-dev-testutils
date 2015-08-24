@@ -20,22 +20,22 @@
     "test": "./node_modules/.bin/gulp test"
   },
   "dependencies": {
-    "chalk": "^1.1.0",
-    "diff": "^1.4.0",
+    "chalk": "^1.1.1",
+    "diff": "^2.0.2",
     "eyeglass": "*",
-    "glob": "^5.0.13",
+    "glob": "^5.0.14",
     "node-sass": "*"
   },
   "devDependencies": {
-    "eyeglass-dev-eslint": "1.0.1",
+    "eyeglass-dev-eslint": "2.0.0",
     "gulp": "^3.9.0",
     "gulp-bump": "^0.3.1",
-    "gulp-eslint": "0.15.0",
+    "gulp-eslint": "1.0.0",
     "gulp-git": "^1.2.4",
-    "gulp-mocha": "^2.1.2",
+    "gulp-mocha": "^2.1.3",
     "gulp-prompt": "^0.1.2",
-    "gulp-tag-version": "^1.2.1",
+    "gulp-tag-version": "^1.3.0",
     "mocha": "^2.2.5",
-    "should": ">= 7.0.1"
+    "should": ">= 7.0.4"
   }
 }
