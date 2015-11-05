@@ -45,6 +45,22 @@ Your test directory would look something like this:
 └── test_my_project.js
 ```
 
+## Custom engines
+
+If you need to use a specific version of Sass or eyeglass, you can pass it via the engine option:
+
+```js
+var Testutils = require("eyeglass-dev-testutils");
+var sass = require("node-sass");
+var eyeglass = require("eyeglass");
+var testutils = new Testutils({
+  engines: {
+    sass: sass,
+    eyeglass: eyeglass
+  }
+});
+```
+
 ## License
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at [http://www.apache.org/licenses/LICENSE-2.0](apache-license)
