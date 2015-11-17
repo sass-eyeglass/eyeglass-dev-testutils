@@ -1,8 +1,17 @@
 "use strict";
 
-var testutils = require("../index");
 var path = require("path");
 var assert = require("assert");
+var sass = require("node-sass");
+var eyeglass = require("eyeglass");
+
+var Testutils = require("../index");
+var testutils = new Testutils({
+  engines: {
+    sass: sass,
+    eyeglass: eyeglass
+  }
+});
 
 var fixtureDir = path.join(__dirname, "fixtures");
 

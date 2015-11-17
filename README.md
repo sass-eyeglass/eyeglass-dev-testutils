@@ -13,8 +13,16 @@ npm install eyeglass-dev-testutils --save-dev
 Example `test_my_project.js` file.
 
 ```js
-var testutils = require("eyeglass-dev-testutils");
 var path = require("path");
+var sass = require("node-sass");
+var eyeglass = require("eyeglass");
+var Testutils = require("eyeglass-dev-testutils");
+var testutils = new Testutils({
+  engines: {
+    sass: sass,
+    eyeglass: eyeglass
+  }
+});
 
 var fixtureDir = path.join(__dirname, "fixtures");  // ./test/fixtures/
 var fixtures = testutils.getSassFixtures(fixtureDir); // returns a collection of test fixtures
@@ -43,22 +51,6 @@ Your test directory would look something like this:
 │   ├── someTest2.css
 │   └── someTest2.scss
 └── test_my_project.js
-```
-
-## Custom engines
-
-If you need to use a specific version of Sass or eyeglass, you can pass it via the engine option:
-
-```js
-var Testutils = require("eyeglass-dev-testutils");
-var sass = require("node-sass");
-var eyeglass = require("eyeglass");
-var testutils = new Testutils({
-  engines: {
-    sass: sass,
-    eyeglass: eyeglass
-  }
-});
 ```
 
 ## License
