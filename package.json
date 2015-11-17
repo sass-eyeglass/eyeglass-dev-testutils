@@ -22,10 +22,10 @@
   "dependencies": {
     "chalk": "^1.1.1",
     "diff": "^2.1.1",
-    "eyeglass": "^0.6.4",
+    "eyeglass": "^0.7.1",
     "glob": "^5.0.14",
     "lodash.merge": "^3.3.2",
-    "node-sass": "3.3.3"
+    "node-sass": "^3.4.2"
   },
   "devDependencies": {
     "eyeglass-dev-eslint": "2.0.0",
