@@ -1,3 +1,9 @@
+<a name="1.0.1"></a>
+## [1.0.1](https://github.com/sass-eyeglass/eyeglass-dev-testutils/compare/v1.0.0...v1.0.1) (2016-01-25)
+
+
+
+
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/sass-eyeglass/eyeglass-dev-testutils/compare/v0.1.0...v1.0.0) (2015-11-17)
 
