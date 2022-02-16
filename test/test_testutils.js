@@ -2,7 +2,7 @@
 
 var path = require("path");
 var assert = require("assert");
-var sass = require("node-sass");
+var sass = require("sass");
 var eyeglass = require("eyeglass");
 
 var Testutils = require("../index");
@@ -33,7 +33,7 @@ describe("#getSassFixtures", function() {
 
   it("should return the collection of fixtures (expected)", function() {
     assert.equal(fixtures.empty.expected, "");
-    assert.equal(fixtures.simple.expected, ".simple {\n  color: rgba(255, 0, 0, 0.8); }\n");
+    assert.equal(fixtures.simple.expected, ".simple {\n  color: rgba(255, 0, 0, 0.8);\n}\n");
   });
 });
 
@@ -45,7 +45,7 @@ describe("#assertCompiles", function() {
       var fixture = fixtures[name];
       describe("Compile Fixture `" + name + "`", function() {
         it("the output should match " + name + ".css", function(done) {
-          testutils.assertCompiles(fixture.source, fixture.expected, done);
+          testutils.assertCompiles({ options: { data: fixture.source } }, fixture.expected, done);
         });
       });
     });
