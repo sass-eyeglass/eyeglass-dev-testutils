@@ -68,26 +68,9 @@ testSuites.forEach(function(suite) {
           var fixture = fixtures[name];
           describe("Compile Fixture `" + name + "`", function() {
             it("the output should match " + name + ".css", function (done) {
-              /**
-               * Output from node-sass differs from dart-sass
-               * node-sass
-               * ```css
-               * h1 {
-               *   color: blue; }
-               * ```
-               * dart-sass
-               * ```
-               * h1 {
-               *   color: blue;
-               * }
-               * ```
-               *
-               * Rather than create new fixtures we adjust the output to
-               * reuse the tests.
-               */
               var source = fixture.source;
               var expected = isNodeSassTestSuite(suiteName) ?
-                adjustOutputForNodeSass(fixture.expected) : fixture.expected;
+                testutils.adjustOutputForNodeSass(fixture.expected) : fixture.expected;
 
               testutils.assertCompiles({options:{data: source}}, expected, done);
             });
@@ -98,10 +81,6 @@ testSuites.forEach(function(suite) {
   });
 });
 
-
-function adjustOutputForNodeSass(output) {
-  return output.replace(/\;\n\}\n$/, "; }\n");
-}
 
 function isNodeSassTestSuite(suiteName) {
   return suiteName === "node-sass";
