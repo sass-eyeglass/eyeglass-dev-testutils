@@ -5,7 +5,6 @@ var config = require("eyeglass-dev-eslint") || {};
 
 // customize some of these...
 var rules = config.rules || {};
-rules["max-len"] = undefined;
 rules["brace-style"] = [2, "stroustrup"];
 rules["max-depth"] = [1, 8];
 config.rules = rules;
