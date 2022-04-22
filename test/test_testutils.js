@@ -45,7 +45,7 @@ describe("#assertCompiles", function() {
       var fixture = fixtures[name];
       describe("Compile Fixture `" + name + "`", function() {
         it("the output should match " + name + ".css", function(done) {
-          testutils.assertCompiles({ options: { data: fixture.source } }, fixture.expected, done);
+          testutils.assertCompiles({options:{data: fixture.source}}, fixture.expected, done);
         });
       });
     });
