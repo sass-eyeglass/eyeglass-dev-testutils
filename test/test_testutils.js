@@ -5,11 +5,17 @@ var assert = require("assert");
 var sass = require("sass");
 var nodeSass = require("node-sass");
 var eyeglass = require("eyeglass");
-
+var cssbeautify = require("cssbeautify");
 var Testutils = require("../index");
 
-
 var testSuites = [];
+
+function formatter(str) {
+  return cssbeautify(str, {
+    indent: "  ",
+    autosemicolon: false,
+  });
+}
 
 testSuites.push({
   suiteName: "sass",
@@ -27,8 +33,12 @@ testSuites.push({
     engines: {
       sass: nodeSass,
       eyeglass: eyeglass
+    },
+    options: {
+      formatter: formatter // Pass a formatter in to ensure that the node-sass output can match dart-sass
     }
-  })
+  }),
+
 });
 
 var fixtureDir = path.join(__dirname, "fixtures");
@@ -69,8 +79,7 @@ testSuites.forEach(function(suite) {
           describe("Compile Fixture `" + name + "`", function() {
             it("the output should match " + name + ".css", function (done) {
               var source = fixture.source;
-              var expected = isNodeSassTestSuite(suiteName) ?
-                testutils.adjustOutputForNodeSass(fixture.expected) : fixture.expected;
+              var expected = fixture.expected;
 
               testutils.assertCompiles({options:{data: source}}, expected, done);
             });
